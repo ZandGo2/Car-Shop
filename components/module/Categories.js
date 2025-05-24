@@ -3,25 +3,34 @@ import Sport from "../icons/Sport";
 import Sedan from "../icons/Sedan";
 import Suv from "../icons/Suv";
 import Hatchback from "../icons/Hatchback";
+import styles from "./categories.module.css";
 
 const Categories = () => {
   return (
-    <div>
-      <Link href="">
-        <Sedan />
-        Sedan
-      </Link>
-      <Link href="">
-        <Suv />
-        Suv
-      </Link>
-      <Link href="">
-        <Hatchback />
-        Hatchback
-      </Link>
-      <Link href="">
-        <Sport /> Sport
-      </Link>
+    <div className={styles.container}>
+      <div>
+        <Link href="">
+          <Sedan />
+          Sedan
+        </Link>
+      </div>
+      <div>
+        <Link href="">
+          <Suv />
+          Suv
+        </Link>
+      </div>
+      <div>
+        <Link href="">
+          <Hatchback />
+          Hatchback
+        </Link>
+      </div>
+      <div>
+        <Link href="">
+          <Sport /> Sport
+        </Link>
+      </div>
     </div>
   );
 };

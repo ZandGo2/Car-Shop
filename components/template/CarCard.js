@@ -1,5 +1,6 @@
 import Location from "../icons/Location";
 import Link from "next/link";
+import styles from "./CarCard.module.css";
 
 const CarCard = ({
   name,
@@ -12,19 +13,20 @@ const CarCard = ({
   id,
 }) => {
   return (
-    <div>
-      <Link href={`/cars/${id}`}>
-        <img src={image} alt={name} />
-        <p>{`${name} ${model}`}</p>
-        <p>{`${year} ${distance} km`}</p>
-        <div>
-          <p>{`$ ${price}`}</p>
-          <p>
-            <Location /> {location}
-          </p>
+    <Link href={`/cars/${id}`}>
+      <div className={styles.container}>
+        <img src={image} className={styles.image} />
+        <h4 className={styles.title}>{`${name} ${model}`}</h4>
+        <p className={styles.detail}>{`${year} . ${distance}km`}</p>
+        <div className={styles.footer}>
+          <p>$ {price}</p>
+          <div className={styles.location}>
+            <p>{location}</p>
+            <Location />
+          </div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

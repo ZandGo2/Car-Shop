@@ -1,15 +1,17 @@
+import styles from "./Layout.module.css";
+
 const layout = ({ children }) => {
   return (
-    <div>
-      <header>
+    <>
+      <header className={styles.header}>
         <h3>SHOP CAR</h3>
         <p>Choose and buy your car</p>
       </header>
       <div>{children}</div>
-      <footer>
+      <footer className={styles.footer}>
         <p>Next.JS course | Shop car Project</p>
       </footer>
-    </div>
+    </>
   );
 };
 

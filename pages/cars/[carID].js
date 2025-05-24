@@ -6,6 +6,7 @@ import Company from "../../components/icons/Company";
 import Model from "../../components/icons/Model";
 import { useRouter } from "next/router";
 import carsData from "../../data/carsData";
+import styles from "../../components/template/carID.module.css";
 
 const DetailCar = () => {
   const Route = useRouter();
@@ -27,53 +28,52 @@ const DetailCar = () => {
   } = data;
 
   return (
-    <div>
-      <img src={image} alt={name} />
-      <p>{`${name} ${model}`}</p>
-      <div>
+    <div className={styles.container}>
+      <img src={image} className={styles.image} />
+      <h3 className={styles.header}>
+        {name} {model}
+      </h3>
+      <div className={styles.details}>
         <div>
-          <p>
-            <Company /> Company
-          </p>
-          <p>{name}</p>
+          <Company />
+          <p>Company</p>
+          <span>{name}</span>
         </div>
         <div>
-          <p>
-            <Model /> Model
-          </p>
-          <p>{model}</p>
+          <Model />
+          <p>Model</p>
+          <span>{model}</span>
         </div>
         <div>
-          <p>
-            <Calender />
-            First registration
-          </p>
-          <p>{year}</p>
+          <Calender />
+          <p>First registration</p>
+          <span>{year}</span>
         </div>
         <div>
-          <p>
-            <Road /> Kms driven
-          </p>
-          <p>{distance}</p>
+          <Road />
+          <p>kms driven</p>
+          <span>{distance}</span>
         </div>
       </div>
-      <div>
-        <p>
-          <Location /> Location
-        </p>
-        <p>{location}</p>
+      <div className={styles.details}>
+        <div>
+          <Location />
+          <p>Location</p>
+          <span>{location}</span>
+        </div>
       </div>
-      <div>
-        <p>Extra Information</p>
-        <p>{description}</p>
+      <div className={styles.details}>
+        <p className={styles.descriptionTitle}>Extra Information</p>
+        <p className={styles.descriptionText}>{description}</p>
       </div>
-      <div>
-        <p>
-          <Money /> Price :
-        </p>
-        <p>{`$ ${price}`}</p>
+      <div className={styles.details}>
+        <div className={styles.price}>
+          <Money />
+          <p>Price:</p>
+          <span>{price}</span>
+        </div>
       </div>
-      <button>Buy</button>
+      <button className={styles.button}>Buy</button>
     </div>
   );
 };

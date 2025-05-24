@@ -3,6 +3,7 @@ import Search from "../components/module/Search";
 import ListCar from "../components/template/ListCar";
 import carsData from "../data/carsData";
 import Link from "next/link";
+import styles from "../components/layout/Layout.module.css";
 
 function Index() {
   const data = carsData.slice(0, 3);
@@ -10,7 +11,7 @@ function Index() {
     <div>
       <Search />
       <Categories />
-      <div>
+      <div className={styles.btn}>
         <Link href="/cars">See All Cars</Link>
       </div>
       <div>
