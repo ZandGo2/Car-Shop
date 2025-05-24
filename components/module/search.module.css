@@ -12,6 +12,7 @@
   flex-direction: column;
   width: 100%;
 }
+
 .container input {
   border: 1px solid #befa00;
   border-radius: 5px;
@@ -29,16 +30,27 @@
   margin-left: 10px;
 }
 
+.backBtn {
+  background-color: #befa00;
+  color: black;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
 @media (max-width: 600px) {
   .container {
     width: 320px;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .container button {
     width: 100%;
     margin: 5px;
   }
+
   .container div {
     margin: 5px;
   }
