@@ -9,25 +9,25 @@ const Categories = () => {
   return (
     <div className={styles.container}>
       <div>
-        <Link href="">
+        <Link href="category/sedan">
           <Sedan />
           Sedan
         </Link>
       </div>
       <div>
-        <Link href="">
+        <Link href="category/suv">
           <Suv />
           Suv
         </Link>
       </div>
       <div>
-        <Link href="">
+        <Link href="category/hatchback">
           <Hatchback />
           Hatchback
         </Link>
       </div>
       <div>
-        <Link href="">
+        <Link href="category/sport">
           <Sport /> Sport
         </Link>
       </div>
